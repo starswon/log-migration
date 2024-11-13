@@ -14,9 +14,9 @@ select id from RecordType where DeveloperName ='contact360'
         logError.DureeAppelAPI__c = duree;
         logError.NbClientsEntree__c = nbInput;
         logError.NbContactsSortie__c = nbOutput;
-        logError.CodePosteMetier__c = role;
-        insert logError; 
-		
+        ###logError.CodePosteMetier__c = role;
+         
+		DSDFGHJKKJKJKJKJ;
 		
 		_	Id
-RecordType	012AP0000022BPdYAM
+
