@@ -1,0 +1,19 @@
+Conception technique de l'affichage du message lors d'un incident :
+
+
+1- la creation du Custom metadata afin de stocker l'incident et garder une trace de sa Date debut, Date fin :
+typesTTMC_MessageIncident va contenir tout le detail sur l'incident .
+
+ typesTTMC_MessageIncident contient 5 custom fields : Nom établissement ,code établissement ,active ,StartDate,EndDate.
+
+le field 'active' est de type checkbox.Si un incident est en cours alors la valeur du 'active_c' est true et un message doit s'afficher sur l'écran.
+
+
+2-Création d'un custom label TTMC_MessageAlertIncident: va contenir le message suivant 'Un incident technique est actuellement constaté. La restitution des nouveaux mails clients est perturbée depuis StartDate' qui doit s'afficher sur la page du component TTMC_EmailList lors d'un incident en cours (active_c==true).
+
+Quand l'incident est fini , un message indiquant la résolution de l'incident s'affichera sur l'écran , dont le besoin de la création d'un nouveau custom label:
+
+3-Création d'un custom label TTMC_MessageAlertIncident qui a comme valeur le message sivant:' La restitution des mails a été perturbée du DateStart au DateEnd.Le service est de nouveau opérationnel.'.
+
+le message restera afficher 8 jours apres la fin de l'incident.
+

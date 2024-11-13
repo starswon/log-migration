@@ -1,0 +1,22 @@
+GOCC_MuleAPI_Log__c  =>  Log__c
+keep the same : createdDate : set it when importing the data, excel ?
+Mapping : Same fields name
+2 years history only (createdDate)
+select id from RecordType where DeveloperName ='contact360'
+
+        ID rt = [select id from RecordType where DeveloperName ='contact360'].id;
+        Log__c logError = new Log__c();        
+        logError.recordtypeId=rt;
+        logError.Type__c = 'ApiCall';
+        logError.IdAgent__c = IdAgent;
+        logError.EntreeClients__c = entreeClients;
+        logError.Message__c = messageErreur;
+        logError.DureeAppelAPI__c = duree;
+        logError.NbClientsEntree__c = nbInput;
+        logError.NbContactsSortie__c = nbOutput;
+        logError.CodePosteMetier__c = role;
+        insert logError; 
+		
+		
+		_	Id
+RecordType	012AP0000022BPdYAM
